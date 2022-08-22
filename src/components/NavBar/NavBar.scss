@@ -1,0 +1,28 @@
+.navbar-container{
+    background-color: #f1d8c6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    .navbar-tittle{
+        font-size: 30px;
+        color: #7b3c30;
+        
+    }
+    .navbar{
+        min-width: 600px;
+        display: flex;
+        justify-content: space-around;
+        .navbar-link{
+            color: #7b3c30;
+            font-size: 18px;
+            &:hover{
+                color: #7b3c3090;
+            }
+        }
+    }
+
+
+
+    
+}
