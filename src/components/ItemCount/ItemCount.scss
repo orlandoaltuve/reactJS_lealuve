@@ -1,0 +1,15 @@
+.ItemCount-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+   
+    .btn1{
+        background-color: #7b3c30;
+        border-color: #7b3c30;
+        border-radius: 1rem;
+        color: white;
+        border-style:solid;
+        margin: 0.5rem 0.5rem;
+    }
+}
