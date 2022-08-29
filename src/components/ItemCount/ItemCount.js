@@ -19,9 +19,9 @@ const ItemCount = ({stock, initial}) => {
     return (
         <div className='ItemCount-container'>
             <div>  
-            <button className='btn1' onClick={handleRestar}>-</button>
-            <span>{contador}</span>
-            <button className='btn1' onClick={handleSumar}>+</button>
+            <button className='btn1 btn-contador' onClick={handleRestar}>-</button>
+            <span className='contador'>{contador}</span>
+            <button className='btn1 btn-contador' onClick={handleSumar}>+</button>
             </div>  
             <button className='btn1 btn-agregar' disabled={stock===0}>Agregar al carrito</button>
         </div>

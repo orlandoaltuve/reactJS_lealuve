@@ -1,6 +1,5 @@
-.ItemList-container{
+.cardP-container{
     display: flex;
-    flex-direction: column;
-    width: 15rem;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
