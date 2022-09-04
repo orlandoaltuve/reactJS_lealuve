@@ -1,6 +1,5 @@
 import Item from "../Item/Item"
-import ItemCount from "../ItemCount/ItemCount"
-import "./ItemList-container.scss"
+import "./ItemList.scss"
 
 const ItemList = ({producto}) =>{
     return(

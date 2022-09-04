@@ -1,15 +1,14 @@
 import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom'
 import "./Item.scss"
 
 function Item({producto}) {
   return (
     <div className='cardP'>
-            <img src={producto.img} alt={" "}/>
+            <img src={producto.img} alt={producto.nombre}/>
             <p>{producto.nombre}</p>
             <p>Precio: {producto.precio}</p>
-            <button className='btn1'>Ver más</button>
-            <ItemCount stock={5} initial={1}/>
+            <Link to={`/item/${producto.id}`} className='btn1'>Ver más</Link>
     </div>
   )
 }
