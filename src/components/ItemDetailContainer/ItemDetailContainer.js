@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
             setLoading(false)
         })
 
-    }, [])
+    },[itemId])
 
   return (
     <div>
@@ -33,34 +33,3 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
-
-
-
-//  ItemDetailContainer() {
-//     const [loading, setLoading]=useState(true)
-//     const {itemID}=useParams
-//     const[item,setItem]=useState(null)
-//     useEffect(()=>{
-//         setLoading(true)
-//         pedirDatos()
-//         .then((res)=>{
-//             setItem(res.find((prod)=>prod.id===Number(itemID)))
-//         })
-//         .finally(()=>{
-//             setLoading(false)
-//         })
-
-//     })
-//   return (
-//     <div>
-//         {
-//             loading
-//             ?<h2>Cargando...</h2>
-//             :<ItemDetail item={item}/>
-//         }
-
-//     </div>
-//   )
-// }
-
-// export default ItemDetailContainer
