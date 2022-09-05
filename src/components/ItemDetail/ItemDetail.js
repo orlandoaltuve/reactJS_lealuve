@@ -12,9 +12,10 @@ const ItemDetail = ({ item }) => {
             <div className='detaiDescription-container'>
                 <h2> {item.nombre}</h2>
                 <h3>${item.precio}</h3>
-                <p><span className='resaltar'>12</span> cuotas sin interes de <span className='resaltar'>${item.precio/12}</span></p>
+                <p><span className='resaltar'>12</span> cuotas sin interes de <span className='resaltar'>${Number(item.precio/12).toFixed(2)}</span></p>
                 <p>Stock disponible: {item.stock}</p>
                 <ItemCount stock={item.stock} initial={1} />
+                <p className='itemDescription'>{item.description}</p>
             </div>
 
             

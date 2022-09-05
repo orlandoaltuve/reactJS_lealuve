@@ -3,10 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+   
     
     .navbar-tittle{
+        font-weight: bold;
         font-size: 30px;
         color: #7b3c30;
+        text-decoration: none !important;
         
     }
     .navbar{
@@ -14,6 +17,7 @@
         display: flex;
         justify-content: space-around;
         .navbar-link{
+            text-decoration: none ;
             color: #7b3c30;
             font-size: 18px;
             &:hover{

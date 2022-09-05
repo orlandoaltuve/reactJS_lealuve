@@ -8,7 +8,7 @@ function Item({producto}) {
             <img src={producto.img} alt={producto.nombre}/>
             <p>{producto.nombre}</p>
             <p>Precio: {producto.precio}</p>
-            <Link to={`/item/${producto.id}`} className='btn1'>Ver más</Link>
+            <Link to={`/item/${producto.id}`} className='btn1 btn-verMas'>Ver más</Link>
     </div>
   )
 }
