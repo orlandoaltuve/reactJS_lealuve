@@ -5,7 +5,7 @@ export const stock=[
     {id:4,nombre:"Riñonera Praga",precio:1350,"stock":100,  img:"../assets/producto4.jpeg",description:"Hermosa riñonera elaborada con ecocuero", category:"riñoneras"},
     {id:5,nombre:"Riñonera Cielo",precio:2000,"stock":100,  img:"../assets/producto5.jpg",description:"Hermosa riñonera elaborada con ecocuero", category:"riñoneras"},
     {id:6,nombre:"Riñonera Belice Negra",precio:2400,"stock":100,  img:"../assets/producto6.jpg",description:"Hermosa riñonera elaborada con ecocuero", category:"riñoneras"},
-    {id:7,nombre:"Bandolera Pía",precio:1789, img:"../assets/producto7.jpg",description:"Hermosa bandolera elabora con ecocuero", category:"bandoleras"},
+    {id:7,nombre:"Bandolera Pía",precio:1789,"stock":13, img:"../assets/producto7.jpg",description:"Hermosa bandolera elabora con ecocuero", category:"bandoleras"},
     {id:8,nombre:"Bandolera Jamiaca",precio:2100,"stock":100,  img:"../assets/producto8.jpg",description:"Hermosa bandolera elabora con ecocuero", category:"bandoleras"},
     {id:9,nombre:"Mochila Siena",precio:1789,"stock":100, img:"../assets/producto9.jpeg",description:"Hermosa mochila elaborada con ecocuero", category:"mochilas"},
     {id:10,nombre:"Mochila Frida",precio:1789,"stock":100, img:"../assets/producto10.jpeg",description:"Hermosa mochila elaborada con ecocuero", category:"mochilas"},
