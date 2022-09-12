@@ -1,0 +1,19 @@
+@import "../../sass/general";
+
+.cartWidget-container{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    p{
+        right: 10px;
+        text-align: center;
+        position: absolute;
+        top: 43%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        
+    }
+}

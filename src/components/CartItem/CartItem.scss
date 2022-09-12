@@ -1,3 +1,17 @@
+@import "../../sass/variables";
+
+
 .unStyle{
     all: unset;
+}
+
+.cartItemContainer{
+    color: $colorSecundario;
+    margin: 2rem 5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cartImage{
+        width: 100px;
+    }
 }

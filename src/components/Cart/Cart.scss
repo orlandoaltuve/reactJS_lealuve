@@ -1,0 +1,14 @@
+@import "../../sass/general";
+
+.cartContainer {
+    h2{
+        text-align: center;
+        margin: 2rem;
+    }
+    color: $colorSecundario;
+    .cart-Info {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+

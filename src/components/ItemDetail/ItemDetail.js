@@ -38,7 +38,7 @@ const ItemDetail = ({ item }) => {
 
                 {
                     isInCart(item.id) 
-                    ?<Link to= '/cart'> Terminar mi compra</Link>
+                    ?<Link to= '/cart' className='btn1'> Terminar mi compra</Link>
                     :<ItemCount stock={item.stock} cantidad={cantidad} setCantidad={setCantidad} handleAgregar={handleAgregar}/>
                 }
 

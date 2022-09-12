@@ -1,4 +1,4 @@
-@import "../../sass/variables";
+@import "../../sass/general";
 
 .detail-container{
     display: flex;
@@ -32,9 +32,7 @@
         p{
             margin-bottom: 2rem;
         }
-        .resaltar{
-            font-weight: bold;
-        }
+
         .itemDescription{
             margin: 2rem 0;
         }
