@@ -18,11 +18,9 @@ const ItemDetail = ({ item }) => {
             cantidad
 
         }
-
         addToCart(itemToCart)
-        
-
     }
+    
     return (
         <div className='detail-container'>
             <div className='detailImage-container'>
@@ -36,7 +34,7 @@ const ItemDetail = ({ item }) => {
                 <p className='itemDescription'>{item.description}</p>
                 
 
-                {
+                {  
                     isInCart(item.id) 
                     ?<Link to= '/cart' className='btn1'> Terminar mi compra</Link>
                     :<ItemCount stock={item.stock} cantidad={cantidad} setCantidad={setCantidad} handleAgregar={handleAgregar}/>

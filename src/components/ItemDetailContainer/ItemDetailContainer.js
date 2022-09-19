@@ -5,6 +5,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import React from 'react'
 import { db } from '../../firebase/config'
+import Loader from '../Loader/Loader'
 
 const ItemDetailContainer = () => {
     const [item,setItem]=useState(null)
@@ -36,7 +37,7 @@ const ItemDetailContainer = () => {
     <div>
         {
             loading
-            ?<h2>Cargando...</h2>
+            ?<Loader/>
             :<ItemDetail item={item}/>
         }
     </div>
