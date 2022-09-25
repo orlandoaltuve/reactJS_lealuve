@@ -17,9 +17,9 @@ const ItemCount = ({ stock, cantidad, setCantidad, handleAgregar }) => {
     }
     if (stock === 0) {
         return (
-            <divc className="container">
+            <div className="container">
                 <Link to="/" className='btn1'>Ir a comprar</Link>
-            </divc>
+            </div>
 
         )
     }

@@ -1,6 +1,7 @@
 @import "../../sass/general";
 
 .cartContainer { 
+    
     h2{
         text-align: center;
         margin: 2rem;
@@ -10,6 +11,13 @@
     .cart-Info {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
+    }
+    .terminarCompraContainer{
+        margin-top: 15px;
+        
+        display: flex;
+        justify-content: center;
     }
 }
 

@@ -1,12 +1,12 @@
 import { Icon } from '@iconify/react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'
-import { CartContex } from '../CartContext/CartContex';
+import { CartContext } from '../CartContext/CartContext';
 import "./CartWidget.scss"
 
 const CartWidget = () => {
 
-    const { cartQuantity,cart } = useContext(CartContex)
+    const { cartQuantity,cart } = useContext(CartContext)
     return (
         <div >
             <Link to='/cart' className={`resaltar cartWidget-container ${cart.length>0 ? "widget-visible" :""}`}>

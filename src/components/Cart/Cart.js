@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContex } from '../CartContext/CartContex'
+import { CartContext } from '../CartContext/CartContext'
 import CartItem from '../CartItem/CartItem'
 import "./Cart.scss"
 
 
 const Cart = () => {
-  const { cart, cartTotal, emptyCart } = useContext(CartContex)
+  const { cart, cartTotal, emptyCart } = useContext(CartContext)
 
   if(cart.length===0){
     return(
@@ -25,6 +25,10 @@ const Cart = () => {
         <button className='btn1' onClick={emptyCart}>Vaciar Carrito</button>
         <p className='resaltar'>TOTAL: ${cartTotal()}</p>
       </div>
+      <div className='terminarCompraContainer'>
+      <Link  to= '/checkout' className='btn1'> Terminar mi compra</Link>
+      </div>
+      
     </div>
   )
 }

@@ -1,7 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import Swal from 'sweetalert2'
 
-export const CartContex = createContext()
+export const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
 
@@ -45,8 +45,19 @@ export const CartProvider = ({ children }) => {
           })
         
     }
+
+    const terminarCompra = (id)=>{
+        Swal.fire({
+            title: 'Compra exitosa',
+            text: `Tu numero de orden es: ${id}`,
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          })
+          setCart([])
+    }
     return (
-        <CartContex.Provider value={{
+        <CartContext.Provider value={{
             cart,
             addToCart,
             isInCart,
@@ -54,10 +65,15 @@ export const CartProvider = ({ children }) => {
             cartTotal,
             emptyCart,
             removeItem,
+            terminarCompra,
         }
         }>
             {children}
 
-        </CartContex.Provider>
+        </CartContext.Provider>
     )
+}
+
+export const useCartContext = () => {
+    return useContext(CartContext)
 }

@@ -1,0 +1,24 @@
+@import "../../sass/general";
+h2{
+    text-align: center;
+    margin: 2rem;
+    color: $colorSecundario;
+}
+
+.formulario{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+        width: 50%;
+        height: 1.5rem;
+        border-radius: 1rem;
+        border-style: solid;
+        border-color: $colorSecundario;
+        border-width: 0.1rem;
+        margin: 0.8rem;
+        padding-left: 0.5rem;
+    }
+
+}
