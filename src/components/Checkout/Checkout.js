@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom';
 import { useCartContext } from '../CartContext/CartContext';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, getDocs, writeBatch, query,where,documentId } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import "./Checkout.scss"
 
@@ -27,6 +27,8 @@ const Checkout = () => {
 
     }
 
+  
+
     const handleInputChange = (e) => {
         setValues({
             ...values,
@@ -34,14 +36,39 @@ const Checkout = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         console.log(orden)
+        const batch= writeBatch(db)
         const ordenesRef= collection(db,"ordenes")
-        addDoc(ordenesRef,orden)
-        .then((doc)=>{
-            terminarCompra(doc.id)
+        const productosRef= collection(db, "productos")
+        const q= query(productosRef, where(documentId(),"in",cart.map(item=>item.id)))
+        const productos = await getDocs(q)
+        const outOfStock=[]
+        
+        productos.docs.forEach((doc)=>{
+            const itemInCart= cart.find(item=>item.id===doc.id)
+            if(doc.data().stock>=itemInCart.cantidad){
+                batch.update(doc.ref,{
+                    stock: doc.data().stock-itemInCart.cantidad
+                })
+            }else{
+                outOfStock.push(itemInCart)
+            }
         })
+        if(outOfStock.length===0){
+            batch.commit()
+                .then(()=>{
+                    addDoc(ordenesRef,orden)
+                        .then((doc)=>{
+                            terminarCompra(doc.id)
+                    })
+
+                })
+        }else{
+            alert("Hay items sin stock")
+            console.log(outOfStock)
+        } 
 
     }
 
