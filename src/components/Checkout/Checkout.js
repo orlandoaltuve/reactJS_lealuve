@@ -38,7 +38,6 @@ const Checkout = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(orden)
         const batch= writeBatch(db)
         const ordenesRef= collection(db,"ordenes")
         const productosRef= collection(db, "productos")
@@ -67,7 +66,6 @@ const Checkout = () => {
                 })
         }else{
             alert("Hay items sin stock")
-            console.log(outOfStock)
         } 
 
     }
