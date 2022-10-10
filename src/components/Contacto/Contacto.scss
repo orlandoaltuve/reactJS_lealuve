@@ -1,0 +1,11 @@
+@import "../../sass/general";
+textarea{
+    width: 50%;
+    height: 6rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: $colorSecundario;
+    border-width: 0.1rem;
+    margin: 0.8rem;
+    padding-left: 0.5rem;
+}

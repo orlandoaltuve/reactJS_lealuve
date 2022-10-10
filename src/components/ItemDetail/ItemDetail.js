@@ -6,7 +6,7 @@ import "./ItemDetail.scss"
 
 
 const ItemDetail = ({ item }) => {
-    const { cart, addToCart, isInCart } = useContext(CartContext)
+    const {addToCart, isInCart } = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
     const handleAgregar = () => {
         const itemToCart = {

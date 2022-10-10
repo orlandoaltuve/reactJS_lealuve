@@ -1,5 +1,4 @@
 import ItemList from "../ItemList/Itemlist"
-// import { pedirDatos } from "../../helpers/pedirDatos"
 import { collection,getDocs, query, where } from "firebase/firestore"
 import { db } from "../../firebase/config"
 import { useEffect, useState } from "react"
@@ -16,7 +15,7 @@ const ItemListContainer = () => {
         const productosRef=collection(db,'productos')
         const q= categoryID
                  ? query(productosRef, where("category","==",categoryID))
-                 :productosRef
+                 : query(productosRef, where("destacado","==",true))
 
         getDocs(q)
             .then((snapshot)=> {
@@ -26,26 +25,20 @@ const ItemListContainer = () => {
             .finally(()=>{
                 setLoading(false)
             })
-        // pedirDatos()
-        //     .then((res) => {
-        //         if(!categoryID){
-        //             setProductos(res)
-        //         }else{
-        //             setProductos(res.filter((prod)=>prod.category===categoryID))
-        //         }
-        //     })
-        //     .finally(()=>{
-        //         setLoading(false)
-        //     })
 
     }, [categoryID])
 
     return (
         <div>
             {
+                categoryID
+                ?<h2>{categoryID[0].toUpperCase()+categoryID.substring(1)}</h2>
+                :<h2>Productos Destacados</h2>
+            } 
+            {
                 loading 
                 ?<Loader/>
-                :<ItemList producto={productos} />
+                :<ItemList producto={productos} /> 
             }
             
         </div>
