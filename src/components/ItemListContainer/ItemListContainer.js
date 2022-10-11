@@ -4,6 +4,7 @@ import { db } from "../../firebase/config"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Loader from "../Loader/Loader"
+import "./ItemListContainer.scss"
 
 const ItemListContainer = () => {
     const [loading, setLoading]=useState(true)
@@ -32,8 +33,8 @@ const ItemListContainer = () => {
         <div>
             {
                 categoryID
-                ?<h2>{categoryID[0].toUpperCase()+categoryID.substring(1)}</h2>
-                :<h2>Productos Destacados</h2>
+                ?<h2 className="titulo">{categoryID[0].toUpperCase()+categoryID.substring(1)}</h2>
+                :<h2 className="titulo">Productos Destacados</h2>
             } 
             {
                 loading 

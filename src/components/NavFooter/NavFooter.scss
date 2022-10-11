@@ -1,0 +1,19 @@
+
+    
+    .navbarFooter{
+        display: flex;
+        justify-content: space-around;
+        .navbar-link{
+            padding: 0rem 0.8rem;
+            text-decoration: none ;
+            color: #7b3c30;
+            font-size: 18px;
+            &:hover{
+                color: #7b3c3090;
+            }
+        }
+    }
+
+
+
+    

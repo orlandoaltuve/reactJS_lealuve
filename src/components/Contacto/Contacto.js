@@ -23,7 +23,7 @@ const Contacto = () => {
   }
   return (
     <div>
-      <h2>Contacto</h2>
+      <h2 className='titulo'>Contacto</h2>
       <form onSubmit={handleSubmit} className="formulario">
         <input
           name='nombre'

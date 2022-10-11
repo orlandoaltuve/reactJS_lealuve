@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { CartContext } from '../CartContext/CartContext'
 import CartItem from '../CartItem/CartItem'
 import "./Cart.scss"
@@ -11,8 +11,7 @@ const Cart = () => {
   if(cart.length===0){
     return(
       <div className='cartEmptyContainer'>
-        <h2>Tu carrito está vacío</h2>
-        <Link to="/" className='btn1'>Ir a comprar</Link>
+        <Navigate to="/"/>
       </div>
     )
 

@@ -75,31 +75,35 @@ const Checkout = () => {
     }
     return (
         <div>
-            <h2>Checkout</h2>
+            <h2 className='titulo'>Checkout</h2>
 
             <form onSubmit={handleSubmit} className="formulario">
                 <input
                     name='nombre'
                     onChange={handleInputChange}
                     type={"text"}
+                    required
                     value={values.nombre}
                     placeholder="Nombre"></input>
                 <input
                     name='email'
                     onChange={handleInputChange}
                     type={"email"}
+                    required
                     value={values.email}
                     placeholder="Email"></input>
                 <input
                     name='telefono'
                     onChange={handleInputChange}
                     type={"text"}
+                    required
                     value={values.telefono}
                     placeholder="Teléfono"></input>
                 <input
                     name='direccion'
                     onChange={handleInputChange}
                     type={"text"}
+                    required
                     value={values.direccion}
                     placeholder="Dirección"></input>
                 <button type='submit' className='btn1'>Enviar</button>

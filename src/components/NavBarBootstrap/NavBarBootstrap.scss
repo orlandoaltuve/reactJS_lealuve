@@ -1,8 +1,22 @@
 @import "../../sass/general";
+.logo{
+    width: 7rem;
+}
+#basic-nav-dropdown{
+    color: #7b3c30 !important;
+    &:hover{
+        color: #7b3c3090 !important;
+    }
+}
+.navbar-link{
+    text-decoration: none ;
+    color: #7b3c30 !important;
+    font-size: 18px;
+    &:hover{
+        color: #7b3c3090 !important;
+    }
+}
 
 .bgColor{
     background-color: $colorPrincipal;
-}
-.navbar-tittle{
-    text-decoration: none;
 }

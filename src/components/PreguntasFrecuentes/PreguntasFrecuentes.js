@@ -5,7 +5,7 @@ import "./PreguntasFrecuentes.scss"
 const PreguntasFrecuentes = () => {
   return (
     <>
-    <h2>PreguntasFrecuentes</h2>
+    <h2 className='titulo'>PreguntasFrecuentes</h2>
     <div className='contenedor'>
       <div className="contenedorImagenTexto">
             <div className="contenedorImagen imagenFaq">

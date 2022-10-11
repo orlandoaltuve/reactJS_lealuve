@@ -4,7 +4,7 @@ import "./Nosotros.scss"
 const Nosotros = () => {
   return (
   <>
-    <h2>Nosotros</h2>
+    <h2 className='titulo'>Nosotros</h2>
     <div className='contenedor'>
       <div className="contenedorImagenTexto">
         <div className="contenedorImagen">

@@ -11,7 +11,7 @@ function BasicExample() {
   return (
     <Navbar className='bgColor'  expand="lg">
       <Container>
-        <Navbar.Brand><Link to="/" className='navbar-tittle'>LEALUVE</Link></Navbar.Brand>
+        <Navbar.Brand ><Link to="/"><img className='logo' src='../../assets/logo.png' alt='logo'></img></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
